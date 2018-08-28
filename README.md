@@ -1,6 +1,6 @@
-# Topology 1
+# MATH 6210 Topology 1
 
-Source rep for notes, etc. with Prof Carla Farsi at CU Boulder.
+- course under [Carla Farsi](https://www.colorado.edu/math/carla-farsi)
 
 See also <http://quamash.net/prelims/topology>.
 
