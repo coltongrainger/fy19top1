@@ -2,6 +2,6 @@
 
 Source rep for notes, etc. with Prof Carla Farsi at CU Boulder.
 
-See also <https://quamash.net/prelims/topology>.
+See also <http://quamash.net/prelims/topology>.
 
 CC-0
