@@ -8,7 +8,7 @@ macros: true
 
 \setcounter{section}{1}
 
-## Assignment due 2018-09-10
+## Assignment due 2018-09-24
 
 ### Continuity by nested closures
 
