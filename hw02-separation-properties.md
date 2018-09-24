@@ -81,16 +81,15 @@ If $x = 0$ then for any $\epsilon > 0$ there's a $\delta = \sqrt{\epsilon}$ such
   - which are continuous from $\RR$ to $\RR_\ell$, also 
   - which are continuous from $\RR_\ell$ to itself.
 
-    Note $\RR_\ell$ is finer than $\RR$ (here $\RR_\ell$ denotes the topological space on the real numbers endowed with the lower limit topology), so $C_\RR(\RR_\ell) \subset C_\RR(\RR)$ (where $C_D(Y)$ denotes the set of continuous functions out of some space $D$ into the space $Y$). 
+For (a) note $\RR_\ell$ is finer than $\RR$ (here $\RR_\ell$ denotes the topological space on the real numbers endowed with the lower limit topology), so $C_\RR(\RR_\ell) \subset C_\RR(\RR)$ (where $C_D(Y)$ denotes the set of continuous functions out of some space $D$ into the space $Y$). 
 
-    First, $C_\RR(\RR_\ell)$ is the set of constant functions. ($\subset$) For suppose $f$ is a constant function. Then for all $\RR_\ell$-open $U$, either $f^{-1}(U) = \emptyset$ or $f^{-1}(U) = \RR$, both open in $\RR$. So $f \in C_\RR(\RR_\ell)$. ($\supset$) In the other direction, suppose that $f \in C_\RR(\RR_\ell)$ with $f$ not constant. Then WLOG there exist $a < b$ such that $f(a) < f(b)$. Let $C = \{c \in (a,b) : f(c) \in (f(a),f(b))\}$. Since $f \in C_\RR(\RR)$ we have the intermediate value property, so $C$ is not empty. Now let $c = \inf C$. I claim $f^{-1}([f(c),f(b))]$ is not open in $\RR$. Indeed $c \in f{-1}([f(c),f(b)))$ but for all $\epsilon > 0$ the open interval $B_\epsilon(c) \not\subset f^{-1}([f(c),f(b))]$. Why? Because if $c - \epsilon/2 \in f^{-1}([f(c),f(b))]$, then $f(c - \epsilon/2) \in [f(c), f(b)) \subset (f(a),f(b))$ but $c = \inf C$. So if $f$ is not constant, then $f$ is not continuous from $\RR \to \RR_\ell$.
+Now I claim $C_\RR(\RR_\ell)$ is the set of constant functions. 
 
-    Second, $f \colon \RR \to \RR_\ell$ is continuous iff $f$ is piecewise defined as 
+*Proof.* ($\subset$) For suppose $f$ is a constant function. Then for all $\RR_\ell$-open $U$, either $f^{-1}(U) = \emptyset$ or $f^{-1}(U) = \RR$, both open in $\RR$. So $f \in C_\RR(\RR_\ell)$. 
 
-    - $\RR_{std}$ continuous and
-    - monotonically increasing
+($\supset$) In the other direction, suppose that $f \in C_\RR(\RR_\ell)$ with $f$ not constant. Then WLOG there exist $a < b$ such that $f(a) < f(b)$. Let $$C = \{c \in (a,b) : f(c) \in (f(a),f(b))\}.$$ Since $f \in C_\RR(\RR)$ we have the intermediate value property, therefore $C$ is a non-empty bounded set of real numbers. Now let $c = \inf C$. I claim $f^{-1}([f(c),f(b)))$ is not open in $\RR$. Indeed $c \in f{-1}([f(c),f(b)))$ but for all $\epsilon > 0$ the open interval $B_\epsilon(c) \not\subset f^{-1}([f(c),f(b)))$. Why? Because if $c - \epsilon/2 \in f^{-1}([f(c),f(b)))$, then $$f(c - \epsilon/2) \in [f(c), f(b)) \subset (f(a),f(b))$$ but $c - \epsilon/2 < c = \inf C$, a contradiction. So if $f$ is not constant, then $f$ is not continuous from $\RR \to \RR_\ell$. \qedsymbol
 
-    on some partition of $\RR$ into countably many half open intervals.
+I conjecture (without proof) $f \colon \RR \to \RR_\ell$ is continuous iff $f$ is piecewise defined as $\RR_{std}$ continuous and monotonically increasing on each set of any partition of $\RR$ into countably many half open intervals.
 
 ### Maps into the order topology [@Mu00, number 18.8]
 
@@ -111,26 +110,39 @@ $$F(x\times y) = \begin{cases}
   (b) We compute the restriction $g \colon \RR \to \RR$ defined by $g(x) = F(x \times x)$.
   (c) $F$ is not continuous.
 
-*Proof.* Without loss of generality, we'll show that $F$ is continuous in $x$ (since $F$ is symmetric in $x$ and $y$ by relabelling). Fix $y = y_0$ and restrict $F\bar_{\RR \times \{y_0\}}$.
+*Demonstration.* Without loss of generality, we'll show that $F$ is continuous in $x$ (since $F$ is symmetric in $x$ and $y$ by relabelling). Fix $y = y_0$ and restrict $F\rvert_{\RR \times \{y_0\}}$ to the horizontal line through $y_0$. That $F\rvert_{\RR \times \{y_0\}}$ is continuous for $(x,y_0) \neq (0,0)$ is clear, for it's an sum, product, and quotient of continuous functions. Now suppose that $(x,y_0) = (0,0)$. Then, consider any $\RR$-basis element $B_\epsilon(0)\ni 0$ for $\epsilon > 0$. The open set $\RR$ maps into $B_\epsilon(0)$ since (with $y_0 = 0$) the restriction $F\rvert_{\RR \times \{0\}}(x) = 0$ for all $x \in \RR$. We've shown (a) that $F$ is continuous in each variable separately.
+
+Now let $g \colon \RR \to \RR$ be defined as the composition $g = F \circ h$ where $$\RR \xrightarrow{h} \RR^2 \xrightarrow{F} \RR$$ and $h\colon x \mapsto (x,x)$. Then $$g(x) = \begin{cases} \frac12, &x \neq 0\\ 0, &x = 0.\end{cases}$$ This shows (b).
+
+Lastly, for (c), given $g$ is *not* continuous from $\RR$ to $\RR$, yet $h$ is continuous, we must have that $F$ is not continuous. \qedsymbol
 
 ### Projections and quotient maps [@Mu00, number 22.3]
 
 Let $\pi_1 \colon \RR \times \RR \to \RR$ be the projection on the first coordinate, and consider the subspace $A = \{x\times y : x \ge 0 \text{ or } y = 0 \}$. The restriction $q\colon A \to \RR$ obtained by $q = \pi_1|_A$ is a quotient map that is neither open nor closed.
 
+*Proof.* Let the map $q \colon A \to \RR$ be defined by the composition $q(z) = (\pi_1 \circ \iota)(z)$ where $\pi_1$ is the first coordinate projection of $\RR^2$ onto $\RR$ and $\iota$ is the inclusion map of $A$ into $\RR^2$. 
+
+To show that $q$ is a quotient map, note that $q$ is clearly surjective. Further, if $U$ is open in $\RR$, then $\pi_1^{-1}(U)$ is open in $\RR^2$, whence in $A$ we have the open set $q^{-1}(U) = A \cap \pi^{-1}(U)$. Lastly, suppose that $q^{-1}(U)$ is open in $A$, and consider $$x \in (\pi_1 \circ \iota)(q^{-1}(U)) = U.$$ Now $q^{-1}(x) \subset q^{-1}(U)$, so for all $z \in q^{-1}(x)$ there's an $\epsilon_z > 0$ such that $$q^{-1}(U) \supset B_z = B_{\epsilon_z}(z) \cap A \text{ with } B_{\epsilon_z}(z) \text{ an open set in $\RR^2$}.$$ Assuming^[I'm not convinced. For example, I'll try to show that $\pi_1$ is *not closed* (and therefore, maybe, also not open?) in the next section, so this logic seems a bit circuituous.] is open, we have that $\pi_1(B_{\epsilon_z}(z)) \supset \pi_1(\iota(q^{-1}(U))) = U$ and $\pi_1(B_{\epsilon_z}(z)) \ni x$. So $U$ is open, as desired. Because $q$ is a *strongly continuous*, surjective function, we say that $q$ is a *quotient map.*
+
+Now to show that $q$ is neither open nor closed. To see that $q$ is not open, consider the $A$-open set $U = B_\epsilon(0 \times 1) \cap A$ where $0 < \epsilon < 1$. Then $q(U) = [0,1)$, which is not $\RR$-open. To see that $q$ is not closed, consider the closed set $$K = \left\{ (x,y) : y \le \frac{1}{1-x} \text{ and } 1 < x \le 2\right\}.$$ Its image $q(K) = \pi_1(K) = (1, 2]$ is not closed.
 
 ### Equivalence relations and quotient spaces [@Mu00, number 22.4]
 
 (a) Define an equivalence relation $\sim$ on the plane $\RR^2$ by $$x_0 \times y_0 \sim x_1 \times y_1 \text{ iff } x_0 + y_0^2  = x_1 + y_1^2.$$
 
-    We describe a space homoemorphic to the equivalence relation's corresponding quotient space $\RR^2/\sim$.
+    I claim the real line $\RR$ is homeomorphic to this equivalence relation's corresponding quotient space $\RR^2/\sim$. 
+
+    That is, the sets in $\RR^2/~$ are exactly the levels curves $x + y^2 = c$, i.e., left opening parabolas where for each $c \in \RR$ the unique parabola on the level curve has the directrix $x = c - \frac12$ and the focus $(c + 1/2, 0) \in \RR^2$. A homeomorphism is apparent---map the level curves satisfying $x + y^2 = c$ to the point $c$ on the real line.
 
 (b) Now redefine the previous equivalence relation $\sim$ (again on the plane) by $$x_0 \times y_0 \sim x_1 \times y_1 \text{ iff } x_0^2 + y_0^2  = x_1^2  + y_1^2.$$
-
-    There's again a familiar space homoemorphic to the equivalence relation's quotient space $\RR^2/\sim$.
+    
+    In this case, the sets in the quotient space are the level curves $x^2 + y^2 = c$, that is, circles about the origin of radius $\sqrt{c}$. Now $\RR / \sim$ is homeomorphic to the half open ray $[0,\infty)$, where such a homeomorphic map can be obtained by mapping the level curves of radius $\sqrt{c}$ to $c \in [0, \infty)$.
 
 ### Restricting to open maps [@Mu00, number 22.5]
 
 Suppose that $p \colon X \to Y$ is an open map. If $A$ is open in $X$, then the map $q \colon A \to p(A)$ obtained by restricting $p$ is an open map.
+
+*Proof.* We want to show that if $U$ is open in the subspace $A$ then $q(U)$ is open in the subspace $p(A)$. So let $U$ be open in $A$. Then $U = W \cap A$ is open in $X$ (since $W$ is open in $X$ by definition of a subspace and since $A$ is open in $X$ by assumption). Then $p(W \cap A) = p(W) \cap p(A)$ is $Y$-open (its a finite intersection of open sets) and thus $q(U) = p(W \cap A)$ is $Y$-open. \qedsymbol
 
 ### Quotienting out $K$ in the $K$-topology [@Mu00, number 22.6]
 
@@ -138,5 +150,7 @@ Let $Y$ be the quotient space obtained from $\RR_K$ by collapsing the set $K$ to
 
 (a) $Y$ is $T_1$ but not Hausdorff.
 (b) The map $p \times p \colon \RR_K \times\RR_K \to Y \times Y$ is not a quotient map.^[The diagonal is not closed in $Y \times Y$, but its inverse image is closed in $\RR_K \times \RR_K$.]
+
+*Proof.* TODO.
 
 ## References
