@@ -1,5 +1,5 @@
 ---
-title: Continuity and Commonly Defined Spaces
+title: Continuity and Common Spaces
 author: Colton Grainger (MATH 6210 Topology)
 date: 2018-09-16
 bibliography: /home/colton/Downloads/coltongrainger.bib
