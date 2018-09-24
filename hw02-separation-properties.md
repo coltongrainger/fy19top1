@@ -20,6 +20,8 @@ Let $(X,\sT)$ and $(Y,\sW)$ be topological spaces. Consider a function $f \colon
 (b) $f(\Cl{A}) \subset \Cl{f(A)}$ for all sets $A\subset X$ in domain.
 (c) $\Cl{f^{-1}(B)} \subset f^{-1}\left(\Cl{B}\right)$ for all sets $B \subset Y$ in the codomain.
 
+*Proof sketch.* (a) implies (c) implies (b) implies (a). I had proved each implication on paper but misplaced my notes. I may revise this proof in a latter assignment.
+
 ### Continuity by nested interiors
 
 Consider the same spaces $(X,\sT)$ and $(Y,\sW)$ again with a function $f \colon X \to Y$. The following are also equivalent.
@@ -28,6 +30,8 @@ Consider the same spaces $(X,\sT)$ and $(Y,\sW)$ again with a function $f \colon
 
 (a) $f$ is continuous.
 (b) $f^{-1}(\Int{B}) \subset \Int{f^{-1}(B)}$ for all sets $B\subset Y$ in the codomain.
+
+*Proof sketch.* (a) implies (b) implies (a). Same case as above.
 
 ### Homeomorphic subspaces of the real line [@Mu00, number 18.5]
 
@@ -97,6 +101,12 @@ Let $Y$ be an ordered set in the order topology. Let $f,g \colon X \to Y$ be con
 
 (a) The set $\{x : f(x) \le g(x)\}$ is closed in $X$.
 (b) The function $h\colon X \to Y$ defined by $h(x) = \min\{f(x),g(x)\}$ is continuous.
+
+*Proof.* To show (a) that $K = \{x : f(x) \le g(x)\}$ is closed in $X$, note that if for all $x \in X$ we have that $f(x) \le g(x)$, then $K = X$ and we're done. So suppose that for some $x \in X$ it's the case that $f(x) > g(x)$. Now we'll argue that $K$ contains all of its limit points. 
+
+For contradiction, suppose $K$ has a limit point $k$ such that $k \notin K$ (that is, $f(k) > g(x)$). Since $k$ is a limit point of $K$ for all open sets $V$ in $X$ (including the pullbacks $f^{-1}(U)$ and $f^{-1}(U)$ of some open $U \in Y$) we that $$V \cap (K \setminus \{k\}) \neq \emptyset.$$ Take a $X$ basis element $B \ni f(k)$ such that if $B$ contains no points^[Verify $B$ is nonempty, consider $f(k) \in B$.] $c$ such that $f(c) \leq g(c)$. Then $f^{-1}(B)$ is $X$ open and yet $$f^{-1}(B) \cap (K \setminus \{k\}) \subset \{x : f(x) \in B\} \cap \{x \colon f(x) \le g(x)\} = \emptyset$$ since if $f(x) \in B$ then $f(x) > g(x)$. Therefore if $k$ is a limit point of $K$, we must have that $k \in K$. So $K$ is closed.
+
+To show (b) that $h$ is continuous, take any $a \in X$. We will demonstrate that for all $Y$-open basis sets $B(h(a))$ there's a $X$ open $U$ such that $h(U) \subset B(h(a))$. Note that if $h(a) = f(a) = g(a)$ we are done, as there exist open $U_f\ni a$ and $U_g\ni a$ satisfying $f(U_f) \subset B(h(a))$ and $g(U_g) \subset B(h(a))$, and $a \in U = U_f \cap U_g$ will satisfy $h(U) \subset B(h(a))$. So without loss of generality, suppose that $h(a) = g(a) < f(a)$ and consider $B(h(a)) = B(g(a))$. Now, because $g$ is continuous at $a$, there's an open set $U_g \cap a$ such that $g(U_g) \subset B(g(a))$. Take the open set (its the complement of a set we just proved is closed) $$V =\{x \colon g(x) < f(x)\}$$ and we have the desired open set $U_g \cap B$ such that $$h(U_g \cap V) = g(U_g \cap V) \subset g(U_g) \subset B(g(a))$$ where the first equality is by definition of $h$ and choice of $V$. \qedsymbol
 
 ### Maps out of the product topology [@Mu00, number 18.12]
 
