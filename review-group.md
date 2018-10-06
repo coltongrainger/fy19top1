@@ -5,13 +5,13 @@ date: 2018-10-05
 revised:
 ---
 
-## Announcements
+## Overview
 
 - Emailed folks on 2018-10-05 to rally up interest.
 - Jonathan Wise ran the pillar course for Topology in 2012: <http://math.colorado.edu/~jonathan.wise/teaching/math6210-fall-2012/>.
 - It's a bit late to dive as deeply into the subject as they did in their course, but I think we'll put forward sufficient effort.
 
-## Reading
+## Curriculum
 
 ### Outlines
 
