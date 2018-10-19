@@ -6,85 +6,42 @@ bibliography: /home/colton/Downloads/coltongrainger.bib
 macros: true
 ---
 
-\setcounter{section}{3}
+\setcounter{section}{4}
 
-## Assignment due 2018-10-08
+## Assignment due 2018-10-24
 
-### [@Mu00, number 23.1]
+### [@Mu00, number 26.1]
 
-Let $\sT$ and $\sT'$ be two topologies on $X$. If $\sT \supset \sT'$, what does connectedness of $X$ in one topology imply about connectedness in the other?
+Let $\sT$ and $\sT'$ be two topologies on the set $X$; suppose that $\sT \supset \sT$. 
 
-### [@Mu00, number 23.4]
+(a) What does compactness of $X$ under one of these topologies imply about compactness under the other?
 
-If $X$ is an infinite set, it is connected in the finite complement topology.
+(b) If $X$ is compact Hausdorff under both $\sT$ and $\sT'$, then either $\sT$ and $\sT'$ are equal or they are not comparable.
 
-\newpage
+### [@Mu00, number 26.5]
 
-### [@Mu00, number 23.5]
+Let $A$ and $B$ be disjoint compact subspaces of the Hausdorff space $X$. There exist disjoint open sets $U$ and $V$ containing $A$ and $B$, respectively.
 
-If $X$ has the discrete topology, then $X$ is totally disconnected. The converse does not hold.
+### [@Mu00, number 26.7]
 
-### [@Mu00, number 23.7]
+If $Y$ is compact, then the projection $\pi_1 \colon X \times Y \to X$ is a closed map.
 
-$\RR_\ell$ is a totally disconnected space.
+### [@Mu00, number 26.11]
 
-\newpage
+Let $X$ be a compact Hausdorff space. Let $\sA$ be a collection of closed connected subsets of $X$ that is simply ordered by proper inclusion. Then $$Y = \bigcap_{A \in \sA} A$$ is connected. 
 
-### [@Mu00, number 23.11]
+**Lemma.** In the setup above, if $C \cup D$ is a separation of $Y$, we can choose disjoint open sets $U$ and $V$ of $X$ containing $C$ and $D$, respectively, where $$\bigcap_{A\in \sA}\left(A \setminus (U \cup V)\right) \neq \emptyset.$$
 
-Let $p \colon X \to Y$ be a quotient map. If each set $p^{-1}(\{y\})$ is connected, and if $Y$ is connected, then $X$ is connected.
+### [@Mu00, number 26.12]
 
-### [@Mu00, number 24.1]
+Let $p \colon X \to Y$ be a closed continuous surjective map such that $p^{-1}(\{y\})$ is compact, for each $y \in Y$ (such a map is called a *perfect map*). If $Y$ is compact, then $X$ is compact.
 
-Let $f \colon S^1 \to \RR$ be a continuous map. We exhibit a point $x$ of $S^1$ such that $f(x) = f(-x)$.
+**Lemma.** In the setup above, if $U$ is an open set containing $p^{-1}(\{y\})$, there is a neighborhood $W$ of $y$ such that $p^{-1}(W)$ is contained in $U$.
 
-\newpage
-
-### [@Mu00, number 24.2]
-
-Let $f \colon X \to X$ be a continuous transformation of $X$. If $X = [0,1]$, then there's a point such that $f(x) = x$. There are continuous transformations of $[0,1)$ and $(0,1)$ without fixed points.
-
-### [@Mu00, number 24.7]
-
-(a) Let $X$ and $Y$ be ordered sets in the order topology. If $f \colon X \to Y$ is order preserving and surjective, then $f$ is a homeomorphism.
-
-(b) Let $X = Y = \RR_{\ge 0}$. Given any positive integer $n$, the function $f\colon X \to Y$ defined by $f(x) := x^n$ is order preserving and surjective. Moreover, $f$ has a continuous inverse $f^{-1} \colon Y \to X$ given by $f^{-1}(y):= \sqrt[ n ]{y}$.
-
-\newpage
-
-### [@Mu00, number 24.10]
-
-If $U$ is an *open* connected subspace of $\RR^2$, then $U$ is path connected.
-
-### [@Mu00, number 25.2]
-
-(a) What are the components and path components of $\RR^\omega$ (in the product topology)?
-
-(b) Let $\RR^\omega$ have the uniform topology. Now $x$ and $y$ lie in the same component of $\RR^\omega$ if and only if the sequence $x- y = (x_1 - y_1, x_2 - y_2, \ldots )$ is bounded.
-
-(c) Suppose $\RR^\omega$ has the box topology. Then $x$ and $y$ lie in the same component of $\RR^\omega$ if and only if the sequence $x - y$ is eventually zero.
-
-\newpage
-
-### [@Mu00, number 25.4] 
-
-Let $X$ be locally path connected. Then every connected open set in $X$ is path connected.
-
-### [@Mu00, number 25.5]
-
-Let $X$ denote the rational points of the interval $[0,1]\times 0$ of $\RR^2$. Let $T$ denote the union of all line segments joining the point $p = 0 \times 1$ to points of $X$.
-
-(a) $T$ is path connected---but only locally connected at the point $p$.
-(b) We exhibit a subset of $\RR^2$ that is path connected but is locally connected at none of it's points.
-
-\newpage 
-
-### [@Mu00, number 25.7] 
-
-The closed infinite broom $X$ is not locally connected at the point at the endpoint $p$, but is weakly locally connected at $p$.
-
-![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=2cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=1cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=0.5cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=0.25cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=0.125cm}
-
-\newpage
+### [@Mu00, number 27.3]
+### [@Mu00, number 27.4]
+### [@Mu00, number 27.5]
+### [@Mu00, number 28.2]
+### [@Mu00, number 28.3]
 
 ## References
