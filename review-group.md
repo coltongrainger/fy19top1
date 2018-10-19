@@ -38,14 +38,16 @@ Here's an example from analysis.
 
 \section{Problems to prove}
 
-\begin{description} item[Packer] Let $A$ and $B$ be subsets of $\reals$
-\with $A \subset B$. Using the definition of Lebesgue outer measure,
-\prove the monotonicity property of outer measure, i.e., show $m^*(A)
-\\le m^*(B)$. item[Rudin] Let $(X, \mathscr{M}, \mu)$ be a measure
-\space, let $\mathscr{M}^*$ be the collection of all $E \subset X$
-\for which there exist sets $A$ and $B$ in $\mathscr{M}$ such that $A
-\\subset E \subset B$ and $\mu(B \setminus A) = 0$, and define $\mu(E) =
-\\mu(A)$ in this situation. Prove $\mathscr{M}^*$ is a $\sigma$-algebra.
+\begin{description}
+
+\item[Packer] Let $A$ and $B$ be subsets of $\reals$ with $A \subset B$. Using
+the definition of Lebesgue outer measure, prove the monotonicity property of
+outer measure, i.e., show $m^*(A) \le m^*(B)$. \item[Rudin] Let $(X,
+\mathscr{M}, \mu)$ be a measure space, let $\mathscr{M}^*$ be the collection of
+all $E \subset X$ for which there exist sets $A$ and $B$ in $\mathscr{M}$ such
+that $A \subset E \subset B$ and $\mu(B \setminus A) = 0$, and define $\mu(E) =
+\mu(A)$ in this situation. Prove $\mathscr{M}^*$ is a $\sigma$-algebra.
+
 \end{description}
 
 \section{Problems to find a counterexample or prove}
@@ -53,11 +55,15 @@ Here's an example from analysis.
 For each of the following statements, determine whether it is true or
 false. If it is true, prove it. If it is false, give a counterexample.
 
-\begin{description} item[Packer] If $F \subset [0,1]$ is Lebesgue
-\measurable and $m(F) > 0$, then $F$ contains an open interval.
-\end{description}
+\begin{description}
 
+\item[Packer] If $F \subset [0,1]$ is Lebesgue measurable and 
+$m(F) >0$, then $F$ contains an open interval.
+
+\end{description}
 ```
+
+We'll have to figure out the distribution of answers at another time. No bullshit.
 
 ## Reading material
 
