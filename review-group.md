@@ -42,11 +42,13 @@ Here's an example from analysis.
 
 \item[Packer] Let $A$ and $B$ be subsets of $\reals$ with $A \subset B$. Using
 the definition of Lebesgue outer measure, prove the monotonicity property of
-outer measure, i.e., show $m^*(A) \le m^*(B)$. \item[Rudin] Let $(X,
-\mathscr{M}, \mu)$ be a measure space, let $\mathscr{M}^*$ be the collection of
-all $E \subset X$ for which there exist sets $A$ and $B$ in $\mathscr{M}$ such
-that $A \subset E \subset B$ and $\mu(B \setminus A) = 0$, and define $\mu(E) =
-\mu(A)$ in this situation. Prove $\mathscr{M}^*$ is a $\sigma$-algebra.
+outer measure, i.e., show $m^*(A) \le m^*(B)$. 
+
+\item[Rudin] Let $(X, \mathscr{M}, \mu)$ be a measure space, let
+$\mathscr{M}^*$ be the collection of all $E \subset X$ for which there exist
+sets $A$ and $B$ in $\mathscr{M}$ such that $A \subset E \subset B$ and 
+$\mu(B \setminus A) = 0$, and define $\mu(E) = \mu(A)$ in this situation. 
+Prove $\mathscr{M}^*$ is a $\sigma$-algebra.
 
 \end{description}
 
