@@ -8,7 +8,7 @@ date: 2018-10-05
 
 ### Mock midterms
 
-We'll offer two mock midterms in MATH 245 before Nov 7th.
+We'll offer two mock midterms in the room MATH 245 before Nov 7th.
 
 - [Friday, November 2, 13:00 – 14:50](https://calendar.google.com/event?action=TEMPLATE&tmeid=MDAwcTltN20zOW9rbzFqcGRwbGpxcThtcjYgY29ncjQ2NDNAY29sb3JhZG8uZWR1&tmsrc=cogr4643%40colorado.edu)
 - [Sunday, November 4, 12:00 – 13:50](https://calendar.google.com/event?action=TEMPLATE&tmeid=NXBiMmx1bGVlY291bWIwZm85ajllbmJtY2MgY29ncjQ2NDNAY29sb3JhZG8uZWR1&tmsrc=cogr4643%40colorado.edu)
@@ -17,7 +17,7 @@ We should aim to compile about 10 interesting questions --- with definitive writ
 
 Here's the shared `tex` file: <https://www.overleaf.com/3558549272ykntkkzvjrmh>.
 
-Could each person could contribute a single question labelled by their name? For example,
+Could each person (who wants to) contribute a single question labelled by their name? For example,
 
 ```latex
 
