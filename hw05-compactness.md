@@ -39,9 +39,35 @@ Let $p \colon X \to Y$ be a closed continuous surjective map such that $p^{-1}(\
 **Lemma.** In the setup above, if $U$ is an open set containing $p^{-1}(\{y\})$, there is a neighborhood $W$ of $y$ such that $p^{-1}(W)$ is contained in $U$.
 
 ### [@Mu00, number 27.3]
+
+In $\RR_K$, the $K$-topology on the real line:
+
+(a) $[0,1]$ is not compact.
+(b) $\RR_K$ is connected. (Consider $(-\infty, 0)$ and $(0, \infty)$ with their usual topologies.)
+(c) $\RR_K$ is not path connected.
+
 ### [@Mu00, number 27.4]
+
+A metric space having more than one point is uncountable.
+
 ### [@Mu00, number 27.5]
+
+This is a special case of the *Baire category theorem*. Let $X$ be a compact Hausdorff space, let $\{A_n\}$ be a countable collection of closed sets of $X$. If each $A_n$ has empty interior in $X$, then the union $\cup A_n$ has empty interior in $X$. 
+
+**Theorem.** Let $X$ be a nonempty compact Hausdorff space. If $X$ has no isolated points, then $X$ is uncountable. [@Mu00, p. 176]
+
 ### [@Mu00, number 28.2]
+
+$[0,1]$ is not limit point compact as a subspace of $\RR_\ell$.
+
 ### [@Mu00, number 28.3]
+
+Let $X$ be limit point compact. 
+
+(a) If $f \colon X \to Y$ is continuous, does it follow that $f(X)$ is limit point compact?
+(b) If $A$ is a closed subset of $X$, does it follow that $A$ is limit point compact?
+(c) If $X$ is a subspace of the Hausdorff space $Z$, does it follow that $X$ is closed in $Z$?
+
+Note: it's not in general true that the product of two limit point compact spaces in limit point compact, even if the Hausdorff condition is assumed.
 
 ## References

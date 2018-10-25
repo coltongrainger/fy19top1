@@ -70,20 +70,6 @@ If $U$ is an *open* connected subspace of $\RR^2$, then $U$ is path connected.
 
 Let $X$ be locally path connected. Then every connected open set in $X$ is path connected.
 
-### [@Mu00, number 25.5]
-
-Let $X$ denote the rational points of the interval $[0,1]\times 0$ of $\RR^2$. Let $T$ denote the union of all line segments joining the point $p = 0 \times 1$ to points of $X$.
-
-(a) $T$ is path connected---but only locally connected at the point $p$.
-(b) We exhibit a subset of $\RR^2$ that is path connected but is locally connected at none of it's points.
-
-\newpage 
-
-### [@Mu00, number 25.7] 
-
-The closed infinite broom $X$ is not locally connected at the point at the endpoint $p$, but is weakly locally connected at $p$.
-
-![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=2cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=1cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=0.5cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=0.25cm} ![](https://topospaces.subwiki.org/w/images/thumb/c/c9/Closedinfinitebroom.png/350px-Closedinfinitebroom.png){width=0.125cm}
 
 \newpage
 
