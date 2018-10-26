@@ -6,6 +6,8 @@ bibliography: /home/colton/Downloads/coltongrainger.bib
 macros: true
 ---
 
+\providecommand{\Int}[1]{\mathrm{Int}\left( #1 \right)}
+\providecommand{\Cl}[1]{\mathrm{Cl}\left( #1 \right)}
 \setcounter{section}{4}
 
 ## Assignment due 2018-10-26
@@ -84,7 +86,7 @@ For each $y$, obtain an open cover of $Y$ as follows
 Since there's an open $W_y$ containing each $y \in Y$, the collection $\{W_y\}$ is a open cover of $Y$. Since $Y$ is compact, there's a finite subcover $\{W_{y_k}\}_1^m$ with 
 $$p^{-1}(\{y_k\} \subset p^{-1}(W_{y_k}) \subset \bigcup_1^{n_{y_k}} U_j.$$
 Now $X = p^{-1}(Y)$, thus 
-$$X = \cup_1^m \underbrace{p^{-1}(W_y)}_{\text{all with finite covers}}$$ 
+$$X = \bigcup_1^m \underbrace{p^{-1}(W_y)}_{\text{all with finite covers}}$$ 
 demonstrating any $\{U_\alpha\}$ open cover of $X$ contains a finite subcover. \qedsymbol
 
 ### [@Mu00, number 27.3]
@@ -101,14 +103,14 @@ In $\RR_K$, the $K$-topology on the real line:
 
     Consider $(-\infty, 0)$ and $(0, \infty)$ with their usual topologies as subspaces from the real line. Now I claim both sets are induced with the same relative topology from $\RR_K$. We focus on the positive valued interval. The following are equivalent
 
-        - $U$ is $\RR_K$-open in $(0,\infty)$ 
-        - $U$ is $(0,\infty) \cap V$ for $V$ $\RR_K$-open in $\RR$
-        - $U$ is $(0, \infty) \cap W$ for $W$ open in the standard topology and $W \not\ni 0$.
+    - $U$ is $\RR_K$-open in $(0,\infty)$ 
+    - $U$ is $(0,\infty) \cap V$ for $V$ $\RR_K$-open in $\RR$
+    - $U$ is $(0, \infty) \cap W$ for $W$ open in the standard topology and $W \not\ni 0$.
 
     Both intervals are connected in the standard topology. Also, the closures
 
-        - $\Cl { (-\infty, 0) } = (\infty, 0]$ 
-        - $\Cl { (0, \infty ) } = [0, \infty)$
+    - $\Cl { (-\infty, 0) } = (\infty, 0]$ 
+    - $\Cl { (0, \infty ) } = [0, \infty)$
     
     are connected. Therefore $\RR_K = (-\infty, 0] \cap [0, \infty)$ is connected. \qedsymbol
 
@@ -128,21 +130,18 @@ If there's no $\alpha$ in the metric space such that $d(x, \alpha) = td(x,y)$, t
 
 This is a special case of the *Baire category theorem*. Let $X$ be a compact Hausdorff space, let $\{A_n\}$ be a countable collection of closed sets of $X$. If each $A_n$ has empty interior in $X$, then the union $\cup A_n$ has empty interior in $X$. 
 
-\providecommand{\Int}[1]{\mathrm{Int}\left( #1 \right)}
-\providecommand{\Cl}[1]{\mathrm{Cl}\left( #1 \right)}
-
 *Given.* $X$ a compact Hausdorff space, $\{A_n\}_\NN$ closed sets with empty interiors.
 
 *To prove.* $\Int{\cup_\NN A_n}$ is empty.
 
 *Proof.* We can find open sets disjoint from closed sets in $X$ like we could find open sets disjoint from points in the proof "if $X$ is a nonempty compact Hausdorff space and $X$ has no isolated points, then $X$ is uncountable."
 
-Explicitly, if $K$ is a closed set in $X$ and $U$ is an open set such that $U\setminus K \neq \emptyset$, then there's an open set $V \subset U$ such that $\Cl V \subset U \setminus K$ [@Mu00, page 176].
+Explicitly, if $K$ is a closed set in $X$ and $U$ is an open set such that $U\setminus K \neq \emptyset$, then there's an open set $V \subset U$ such that $\Cl V \subset U \setminus K$. See [@Mu00, page 176].
 
-We'll show any open $V$ has a point $x \notin \cup_\NN A_n$. So let $V$ be open. Since $\Int A_1$ is empty, we have by the previous argument $V_1 \subset V \setminus A_1$, with $\Cl V \subset V \setminus A_1$. We'll define now a nested sequence of closed sets $\Cl V_1 \supset \Cl V_2 \supset \cdots$ inductively by finding 
-$$V_n \subset V_{n-1} \setminus A_n \quad \text{ with }\quad \Cl V_n \subset V_{n-1} \subset \Cl V_2.$$
+We'll show any open $V$ has a point $x \notin \cup_\NN A_n$. So let $V$ be open. Since $\Int { A_1 }$ is empty, we have by the previous argument $V_1 \subset V \setminus A_1$, with $\Cl V \subset V \setminus A_1$. We'll define now a nested sequence of closed sets $\Cl V_1 \supset \Cl V_2 \supset \cdots$ inductively by finding 
+$$V_n \subset V_{n-1} \setminus A_n \quad \text{ with }\quad \Cl { V_n } \subset V_{n-1} \subset \Cl { V_{n-1} }.$$
 Now since $X$ is compact, there exists a point 
-$$x \in \underbrace{\bigcap_\NN \Cl V_n}_{\text{in }V} \quad\text{such that}\quad x \notin \bigcup_\NN A_n,$$
+$$x \in \underbrace{\bigcap_\NN \Cl { V_n }}_{\text{contained in }V} \quad\text{such that}\quad x \notin \bigcup_\NN A_n,$$
 which demonstrates the union $\cup A_n$ has trivial interior. \qedsymbol
 
 ### [@Mu00, number 28.2]
@@ -156,9 +155,15 @@ $[0,1]$ is not limit point compact as a subspace of $\RR_\ell$.
 Let $X$ be limit point compact. 
 
 (a) If $f \colon X \to Y$ is continuous, does it follow that $f(X)$ is limit point compact?
+
+    No. Consider the continuous projection of sets in $\NN \times \{0,1\}$ onto $\NN$ (where $\{0,1\}$ is an indiscrete space and $\NN$ discrete).
+
 (b) If $A$ is a closed subset of $X$, does it follow that $A$ is limit point compact?
+    
+    Yes. Any infinite subset of $A$ has a limit point in $X$ as setup above.
+
 (c) If $X$ is a subspace of the Hausdorff space $Z$, does it follow that $X$ is closed in $Z$?
 
-Note: it's not in general true that the product of two limit point compact spaces in limit point compact, even if the Hausdorff condition is assumed.
+    No. Consider the minimal uncountable well-ordered set $S_\Omega \subset \overline{S_\Omega}$. 
 
 ## References
