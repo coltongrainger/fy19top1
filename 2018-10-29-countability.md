@@ -2,8 +2,7 @@
 title: Countability, Metrizability, Intro to Homotopy
 author: Colton Grainger (Topology MATH 6210)
 date: 2018-10-29
-bibliography: /home/colton/Downloads/coltongrainger.bib
-macros: true
+bibliography: /home/colton/coltongrainger.bib
 ---
 
 \providecommand{\Int}[1]{\mathrm{Int}\left( #1 \right)}
